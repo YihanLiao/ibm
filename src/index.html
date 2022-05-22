@@ -1,10 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <title><%= htmlWebpackPlugin.options.title %></title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <div id="title">外幣換匯</div>
+  <div id="info">
+    <div class="item">
+      <div class="left">幣別</div>
+      <div class="right">
+        <img class="circle-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/United-states_flag_icon_round.svg/32px-United-states_flag_icon_round.svg.png">
+        <span>美元</span>
+      </div>
+    </div>
+    <div class="item">
+      <span>匯率</span>
+      <span></span>
+    </div>
+    <div class="quote">報價時間：2021/12/01 15:33</div>
+  </div>
+  <form method="post">
+    <fieldset>
+      <legend>我要買入</legend>
+      <div class="input-wrapper">
+        <input type="number">
+        <label>美元</label>
+      </div>
+      <div class="input-wrapper">
+        <input type="text" disabled>
+        <label>台幣</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>選擇帳戶</legend>
+      <label>
+        <select>
+          <option>外幣帳戶 00001234567890</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset class="form-fieldset-radio">
+      <legend>是否存入常用？</legend>
+      <div class="radio-item">
+        <input id="frequently-true" type="radio" name="frequently" value="true">
+        <label for="frequently-true">是</label>
+      </div>
+      <div class="radio-item">
+        <input id="frequently-false" type="radio" name="frequently" value="false">
+        <label for="frequently-false">否</label>
+      </div>
+    </fieldset>
+    <div class="info-wrapper">
+      <h4>外匯收支或交易申報辦法規定</h4>
+      條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容條款內容
+    </div>
+    <div class="term-wrapper">
+      <input type="checkbox" id="terms" name="terms" checked>
+      <label for="terms">我已審閱並同意上述條款</label>
+    </div>
+    <button type="submit">送出</button>
+  </form>
 </body>
 </html>
